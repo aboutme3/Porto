@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Porto</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .jumbotron {
+  margin: 0px;
+  padding-top: 5rem;
+  background-color: #9BABB8;
+}
+.animate {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+#galery {
+  background-color: #ffffff;
+}
+nav{
+  background-color: #4F709C;
+}
+#about{
+  font-family: Inter, Sans-Serif;
+}
+h1 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+}
+
+.logo{
+  margin: 0px 5px;
+}
+p{
+  font-size: 17px;
+}
+
+
+ </style>
+ <script>
+    function validateForm() {
+      var name = document.forms["contactForm"]["name"].value;
+      var email = document.forms["contactForm"]["email"].value;
+      var message = document.forms["contactForm"]["message"].value;
+      
+      if (name == "" || email == "" || message == "") {
+        alert("Mohon lengkapi semua field!");
+        return false;
+      }
+    }
+    window.addEventListener("scroll", animateOnScroll);
+    
+    function animateOnScroll() {
+      var elements = document.getElementsByClassName("animate");
+      
+      for (var i = 0; i < elements.length; i++) {
+        var position = elements[i].getBoundingClientRect().top;
+        
+        if (position < window.innerHeight) {
+          elements[i].style.opacity = 1;
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white" id="home">
+  <!---navbar--->
+  <nav class="navbar navbar-expand-lg navbar-dark  shadow fixed-top">
+    <div class="container">
+      <a style="font-family: Courier New;" class="navbar-brand" href="#">Portofolioku</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a style="font-family: Georgia;" class="nav-link active" aria-current="page" href="#home">Home <img src="https://cdn-icons-png.flaticon.com/128/25/25694.png" style="width: 17px;"></a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family: Georgia;" class="nav-link" href="#about">About me <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" style="width: 18px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galery">Galery <img src="https://cdn-icons-png.flaticon.com/128/3342/3342176.png" style="width:18px;"></a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family: Georgia;" class="nav-link" href="#contact">Contact Me <img src="https://cdn-icons-png.flaticon.com/128/7269/7269995.png"style="width:18px;"></a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family: Georgia;" class="nav-link" href="https://ink.kazennka.repl.co">Linktree <img src="https://cdn-icons-png.flaticon.com/128/1828/1828479.png" style="width: 17px;" ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!----akhir navbar---->
+  <!--jumbotron---->
+  <section class="jumbotron text-center">
+    <img src="https://iili.io/H6wLHzb.jpg" alt="Aef Saepullah" style="width: 120px; height: 120px; margin: 10px;" class="img-thumbnail rounded-circle shadow ">
+    <h3 class="animate" style="font-family: Times New Roman;">Aef Saepullah</h3>
+    <a class="logo" style="text-decoration: none;" href="https://www.instagram.com/kazennka_co/">
+    <img src="https://cdn-icons-png.flaticon.com/128/733/733614.png" style="width: 18px;" alt="logo"></a>
+    <a class="logo" style="text-decoration: none;" href="https://wa.me/6285659633093/">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733641.png" style="width: 18px;" alt="logo"></a>
+    <a class="logo" style="text-decoration: none;" href="">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" style="width: 20px;" alt="logo"></a>
+<a class=logo"" style="text-decoration:  none;" href="https://www.facebook.com/saef.onefivesix">
+<img src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png" style="width: 20px;" alt="logo"></a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L14.1,117.3C28.2,139,56,181,85,170.7C112.9,160,141,96,169,69.3C197.6,43,226,53,254,48C282.4,43,311,21,339,16C367.1,11,395,21,424,64C451.8,107,480,181,508,208C536.5,235,565,213,593,202.7C621.2,192,649,192,678,208C705.9,224,734,256,762,245.3C790.6,235,819,181,847,149.3C875.3,117,904,107,932,101.3C960,96,988,96,1016,80C1044.7,64,1073,32,1101,26.7C1129.4,21,1158,43,1186,90.7C1214.1,139,1242,213,1271,213.3C1298.8,213,1327,139,1355,128C1383.5,117,1412,171,1426,197.3L1440,224L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z"></path></svg>
+  </section>
+
+  <!----akhir jumbotron---->
+  <!-- about-->
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 style="font-family: Georgia;">About me</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center fs-5 text-center">
+        <div class="">
+          <p class="animate" style="font-family: Times New Roman;" class="card-text">
+            <i>Hai perkenalkan saya Aef Saepullah, ini adalah website portofolio pertama saya, yang saya buat sendiri bermodalkan Hp, saya sangat suka dengan mendesign web seperti ini  walaupun tampilannya masih agak kaku.<br> Web masih dalam tahap pengembangan </br>
+            </i>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L14.1,48C28.2,64,56,96,85,90.7C112.9,85,141,43,169,69.3C197.6,96,226,192,254,229.3C282.4,267,311,245,339,218.7C367.1,192,395,160,424,154.7C451.8,149,480,171,508,160C536.5,149,565,107,593,122.7C621.2,139,649,213,678,229.3C705.9,245,734,203,762,154.7C790.6,107,819,53,847,58.7C875.3,64,904,128,932,154.7C960,181,988,171,1016,165.3C1044.7,160,1073,160,1101,186.7C1129.4,213,1158,267,1186,293.3C1214.1,320,1242,320,1271,272C1298.8,224,1327,128,1355,80C1383.5,32,1412,32,1426,32L1440,32L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z"></path></svg>
+  </section>
+  <!--akhir about-->
+
+  <!-- galery -->
+  <section id="galery">
+    <div class="container">
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <h2 style="font-family: Georgia;">Galery</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://iili.io/H6wpLUx.jpg" class="card-img-top" alt="Galeri 1">
+            <div class="card-body">
+              <p class="animate" style="font-family: Times New Roman;" class="card-text" >
+                Potret Milky Way(Galaksi Bima sakti) Menggunakan Hp
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://iili.io/HuBeRHu.jpg" class="card-img-top" alt="Galeri 2">
+            <div class="card-body">
+              <p class="animate" style="font-family: Times New Roman;" class="card-text">
+                Saweria
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://iili.io/H6w6hbf.jpg" class="card-img-top" alt="Galeri 3">
+            <div class="card-body">
+              <p class="animate" style="font-family: Times New Roman;" class="card-text">
+                ini adalah web kedua yang saya buat, mengikuti konsep dari <a href="https://ink.kazennka.repl.co">Linktree</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1" d="M0,32L0,192L102.9,192L102.9,32L205.7,32L205.7,128L308.6,128L308.6,0L411.4,0L411.4,32L514.3,32L514.3,288L617.1,288L617.1,96L720,96L720,192L822.9,192L822.9,256L925.7,256L925.7,128L1028.6,128L1028.6,160L1131.4,160L1131.4,128L1234.3,128L1234.3,32L1337.1,32L1337.1,224L1440,224L1440,320L1337.1,320L1337.1,320L1234.3,320L1234.3,320L1131.4,320L1131.4,320L1028.6,320L1028.6,320L925.7,320L925.7,320L822.9,320L822.9,320L720,320L720,320L617.1,320L617.1,320L514.3,320L514.3,320L411.4,320L411.4,320L308.6,320L308.6,320L205.7,320L205.7,320L102.9,320L102.9,320L0,320L0,320Z"></path>
+    </svg>
+  </section>
+  <!-- akhir galery-->
+  <!-- contact-->
+  <section id="contact">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col"><p style="font-family: Georgia; text-center">Contact me</p>
+          <h2 class="animate" style="font-family: Georgia;"><i> Send me a message </i></h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="https://formspree.io/f/mwkjgqqe" onsubmit="return validateForm()" method="POST">
+            <div class="mb-3">
+              <label style="font-family: Georgia;" for="name" class="form-label"></label>
+              <input type="text" class="form-control " name="Dari" placeholder="Full name*" id="name" aria-describedby="name" required="name">
+            </div>
+            <div class="mb-3">
+            <label style="font-family: Georgia;" for="name" class="form-label"></label>
+              <input type="text" class="form-control" name="Subjek" placeholder="Subject*" id="Subjek" aria-describedby="subjek" required="Subjek">
+            </div>
+            <div class="mb-3">
+              <label style="font-family: Georgia;" for="email" class="form-label"></label>
+              <input type="email" class="form-control" name="Email" placeholder="Email address*" id="email" aria-describedby="email" required="email">
+            </div>
+            <div class="mb-3">
+              <label style="font-family: Georgia;" label="pesan" class="pesan"></label>
+              <textarea class="form-control" placeholder="Message*" name="Pesan" id="pesan"></textarea>
+            </div>
+            <button style="font-family: Georgia;" type="submit" value="kirim" class="btn btn-primary shadow mb-3 rounded">Submit now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p class="animate text-center" style="font-family: Georgia;">
+      © 2023 Kazennka. All rights reserved
+    </p>
+   
+  </section>
+  <!-- close-->
+
+  <!-- footer-->
+  <footer class="bg-transparent text-white text-center pb-1 mb-3">
+      <a class="logo" style="text-decoration: none;" href="https://www.instagram.com/kazennka_co/">
+    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" style="width: 18px;" alt="logo"></a>
+    <a class="logo" style="text-decoration: none;" href="https://wa.me/6285659633093/">
+    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384883.png" style="width: 18px;" alt="logo"></a>
+    <a class="logo" style="text-decoration: none;" href="https://www.instagram.com/kazennka_co/">
+    <img src="https://cdn-icons-png.flaticon.com/128/841/841364.png" style="width: 18px;" alt="logo"></a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
